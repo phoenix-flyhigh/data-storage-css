@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./images/bg-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.container {
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 1rem;
+  border-top-right-radius: 10rem;
+  width: 86%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.folders {
+  display: flex;
+  justify-content: space-between;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.folder-icon {
+  background-color: hsl(229, 57%, 11%);
+  padding: 0.75rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-storage {
+  width: 86%;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: hsl(243, 100%, 93%);
+  position: relative;
+}
+.card-storage p {
+  font-size: 1rem;
+}
+
+.progress {
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 1rem;
+  width: 90%;
+  margin: 0 1rem;
+  height: 1.1rem;
+  padding: 0.1rem;
+}
+
+.progress-bar {
+  width: 75%;
+  background-image: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  height: 0.9rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ball {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+.storage-limit {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+  position: absolute;
+  transform: translateY(130%);
+}
+
+.floating-msg {
+  background-color: #fff;
+  color: hsl(228, 56%, 26%);
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.floating-msg strong {
+  font-size: 2rem;
+}
+.floating-msg span {
+  color: hsl(229, 7%, 55%);
+  font-size: 1rem;
+  font-weight: 700;
+  text-wrap: nowrap;
+}
+
+.triangle {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url("./images/bg-desktop.png");
+    background-size: unset;
+    background-position-y: bottom;
+    background-color: hsl(229, 57%, 11%);
+  }
+  .wrapper {
+    flex-direction: row;
+    justify-content: center;
+    width: 64%;
+    height: -moz-fit-content;
+    height: fit-content;
+    align-items: end;
+  }
+  .container {
+    max-width: 320px;
+  }
+  .card-storage {
+    min-width: 480px;
+  }
+  .card-storage p {
+    align-self: flex-start;
+    margin-left: 1.5rem;
+  }
+  .msg {
+    transform: translate(90%) translateY(-70%);
+  }
+  .floating-msg {
+    padding: 1rem;
+    border-bottom-right-radius: 0;
+  }
+  .triangle {
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #fff;
+    border-right: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+}/*# sourceMappingURL=style.css.map */
